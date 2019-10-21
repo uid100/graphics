@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+
+<script>window.onload = (function () {
+        new RGraph
+            .HorseshoeMeter(
+                //.EggTimer(
+                {
+                    id: 'timer',
+                    min: 0,
+                    max: 15,
+                    value: 13,
+                    options: {
+                    }
+                }
+            )
+            //.draw()
+            //}).roundRobin();
+            .roundRobin(
+                { frames: 60 },
+                function () { console.log('Animation complete!'); }
+            );
+    });</script>
+<h3> timer </h3>
+<p>
+    <canvas id="timer" width="300" height="300" style="border: 2px solid #ddd">
+        [No canvas support]
+    </canvas>
+</p>
+
+<p>
+    <li><a href="~/Home/Index">Bar Graph</a></li>
+</p>
+

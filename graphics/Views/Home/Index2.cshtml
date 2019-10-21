@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+
+<script>// You don't HAVE to use the window.onload event here, but if you don't
+    // you must include the libraries and have defined the canvas tag first.
+    window.onload = (function () {
+        var data = [280, 45, 133, 166, 84, 259, 266, 960, 219, 311, 67, 89];
+
+        new RGraph.Bar({
+            id: 'barchart',
+            data: data,
+            options: {
+                xaxisLabels: [
+                    'Jan', 'Feb',
+                    'Mar', 'Apr',
+                    'May', 'Jun',
+                    'Jul', 'Aug',
+                    'Sep', 'Oct',
+                    'Nov', 'Dec'
+                ],
+                marginLeft: 35
+            }
+        }).draw();
+    });</script>
+
+<h3> data chart </h3>
+<p>
+    <canvas id="barchart" width="600" height="250" style="border: 1px solid #ddd">[No canvas support]</canvas>
+</p>
+
+<p>
+<p>
+    <li><a href="~/Home/Index">Bar Graph</a></li>
+</p>
+
+</p>

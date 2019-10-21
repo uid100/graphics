@@ -1,0 +1,158 @@
+﻿
+
+body {
+    /*background: url('http://paper-backgrounds.com/textureimages/2012/05/white-concrete-wall-texture-background-hd.jpg');*/
+}
+
+section {
+    position: relative;
+    width: 92%;
+    height: 92%;
+    background: #00f url('/images/white-linen-paper-texture.jpg') center center;
+    border: thick solid #000;
+    border-radius: 50%;
+    box-shadow: inset 40px 40px 90px rgba(0,0,0,.2), inset 10px 10px 30px rgba(0,0,0,.5), 20px 20px 30px rgba(0,0,0,.4), 40px 40px 60px rgba(0,0,0,.4);
+    top: 4%;
+    left: 4%;
+    z-index: 1;
+}
+section:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+    background: transparent;
+    border: thick solid white;
+}
+section:after {
+    content: '';
+    width: 103%;
+    height: 103%;
+    border-radius: 50%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: -1.5%;
+    left: -1.5%;
+    box-shadow: -3px -3px 9px rgba(255,255,255,.8);
+}
+
+.label {
+    position: absolute;
+    align-content: center;
+    top: 20%;
+    left: 50%;
+    font-size: 5vmin;
+    color: black;
+}
+
+.hourhand,
+.minutehand,
+.secondhand
+{
+    width: 40%;
+    height: 4%;
+    background: #000;
+    position: absolute;
+    top: calc(48%);
+    left: calc(43%);
+    z-index: 2;
+    transform-origin: 15%;
+}
+
+.hourhand:after,
+.secondhand:after,
+.minutehand:after {
+    content: '';
+    background: #000;
+    width: 5vmin;
+    height: 5vmin;
+    border-radius: 50%;
+    z-index: 3;
+    position: absolute;
+    top: -1.5vmin;
+    left: 1.5vmin;
+}
+
+.hourhand {
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: -10px 0px 10px rgba(0,0,0,.4);
+}
+
+.minutehand {
+    width: 52%;
+    height: 2%;
+    transform-origin: 10%;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    box-shadow: -10px 10px 10px rgba(0,0,0,.4);
+}
+
+.minutehand:before {
+    content: '';
+    width: 4.5vmin;
+    height: 4.5vmin;
+    border-radius: 50%;
+    z-index: 99;
+    position: absolute;
+    top: -1.7vmin;
+    left: 1.7vmin;
+    box-shadow: -2px -2px 7px rgba(255,255,255,.6);
+}
+
+    .minutehand:after {
+        top: -2vmin;
+    }
+
+.secondhand {
+    width: 54%;
+    height: 1%;
+    //top: 40.75vmin;
+    //transform: rotate(160deg);
+    transform-origin: 10%;
+    box-shadow: -10px -10px 10px rgba(0,0,0,.4);
+}
+
+    .secondhand:after {
+        //top: -2.25vmin;
+    }
+
+.hour12,
+.hour1,
+.hour2,
+.hour3,
+.hour4,
+.hour5 {
+    height: 2%;
+    width: 20%;
+    background: transparent;
+    border-left: 7vmin solid #000;
+    border-right: 7vmin solid #000;
+    /* transform: translate(-50%, -50%);*/
+    /*     transform-origin: right bottom; */
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.hour3 {
+    transform: rotate(90deg) translate(0, 34vmin);
+}
+
+.hour1 {
+    transform: rotate(120deg) translate(17vmin, 30vmin);
+}
+
+.hour2 {
+    transform: rotate(150deg) translate(29vmin, 18vmin);
+}
+
+.hour4 {
+    transform: rotate(210deg) translate(30vmin, -17vmin);
+}
+
+.hour5 {
+    transform: rotate(240deg) translate(17vmin, -30vmin);
+}
