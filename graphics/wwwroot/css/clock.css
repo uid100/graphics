@@ -38,41 +38,71 @@ section:after {
     box-shadow: -3px -3px 9px rgba(255,255,255,.8);
 }
 
+.meas1,
+.meas2,
+.meas3,
+.meas4
+.meas5
+.meas6 {
+    position: absolute;
+    display: block;
+    left: 0%;
+    top: 50%;
+    height: 1px;
+    width: 100%;
+    background: #00f;
+    z-index: 350;
+    transform-origin:center;
+}
+.meas1 {
+    transform: rotate(-60deg);
+}
+.meas2 {
+    transform: rotate(-30deg);
+}
+.meas4 {
+    transform: rotate(30deg);
+}
+.meas5 {
+    transform: rotate(60deg);
+}
+.meas6 {
+    transform: rotate(90deg);
+}
+
 .label {
     position: absolute;
-    align-content: center;
-    top: 20%;
-    left: 50%;
-    font-size: 5vmin;
+    top: 65%;
+    left: 41%;
+    font-size: medium;
     color: black;
+    text-align:center;
 }
 
 .hourhand,
 .minutehand,
-.secondhand
-{
+.secondhand {
     width: 40%;
     height: 4%;
     background: #000;
     position: absolute;
-    top: calc(48%);
-    left: calc(43%);
+    top: 48%;
+    left: 44%;
     z-index: 2;
     transform-origin: 15%;
+    /*transform: rotate(270deg);*/
 }
 
-.hourhand:after,
-.secondhand:after,
-.minutehand:after {
+.hourhand:after {
     content: '';
     background: #000;
-    width: 5vmin;
-    height: 5vmin;
+    height: 200%;
+    width: 20%;
     border-radius: 50%;
     z-index: 3;
     position: absolute;
-    top: -1.5vmin;
-    left: 1.5vmin;
+    top: -50%;
+    left: 5%;
 }
 
 .hourhand {
@@ -82,37 +112,39 @@ section:after {
 }
 
 .minutehand {
+    background: #000;
     width: 52%;
     height: 2%;
-    transform-origin: 10%;
+    top: 49%;
+    transform-origin: 11.5%;
     border-top-right-radius: 30%;
     border-bottom-right-radius: 30%;
     box-shadow: -10px 10px 10px rgba(0,0,0,.4);
+    /*transform: rotate(135deg);*/
 }
 
-.minutehand:before {
+.minutehand:after {
     content: '';
-    width: 4.5vmin;
-    height: 4.5vmin;
+    background: #000;
+    width: 14%;
+    height: 340%;
     border-radius: 50%;
-    z-index: 99;
+    z-index: 3;
     position: absolute;
-    top: -1.7vmin;
-    left: 1.7vmin;
+    top: -120%;
+    left: 4.5%;
     box-shadow: -2px -2px 7px rgba(255,255,255,.6);
 }
 
-    .minutehand:after {
-        top: -2vmin;
-    }
-
 .secondhand {
+    background: #f00;
     width: 54%;
     height: 1%;
-    //top: 40.75vmin;
-    //transform: rotate(160deg);
+    top: 49.5%;
     transform-origin: 10%;
     box-shadow: -10px -10px 10px rgba(0,0,0,.4);
+    z-index: 5;
+    /*transform: rotate(90deg);*/
 }
 
     .secondhand:after {
@@ -125,34 +157,50 @@ section:after {
 .hour3,
 .hour4,
 .hour5 {
+    position: absolute;
+    display: block;
     height: 2%;
-    width: 20%;
+    width: 90%;
     background: transparent;
-    border-left: 7vmin solid #000;
-    border-right: 7vmin solid #000;
-    /* transform: translate(-50%, -50%);*/
-    /*     transform-origin: right bottom; */
+    border-left: 40px solid #000;
+    border-right: 40px solid #000;
+    transform-origin: center center;
+    transform: translate( -50%, -50%);
     top: 50%;
     left: 50%;
-    position: absolute;
+    z-index: 1;
 }
+/*
+    position: absolute;
+    display: block;
+    left: 0%;
+    top: 50%;
+    height: 1px;
+    width: 100%;
+    background: #00f;
+    z-index: 350;
+    transform-origin:center;
 
-.hour3 {
-    transform: rotate(90deg) translate(0, 34vmin);
+*/
+
+.hour12 {
+    transform: rotate(-90deg) translate( 0.5%, -2250%);
 }
 
 .hour1 {
-    transform: rotate(120deg) translate(17vmin, 30vmin);
+    transform: rotate(120deg) translate( 25%, 2000%);
 }
 
 .hour2 {
-    transform: rotate(150deg) translate(29vmin, 18vmin);
+    transform: rotate(150deg) translate( 44%, 1160%);
 }
 
 .hour4 {
-    transform: rotate(210deg) translate(30vmin, -17vmin);
+    transform: rotate(210deg) translate( 43%, -1111%);
 }
 
 .hour5 {
-    transform: rotate(240deg) translate(17vmin, -30vmin);
+    transform: rotate(240deg) translate( 25%, -1905%);
 }
+
+
