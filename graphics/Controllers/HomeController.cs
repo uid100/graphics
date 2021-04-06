@@ -17,6 +17,7 @@ namespace graphics.Controllers
         public IActionResult Arc() => View();
         public IActionResult Clock() => View();
         public IActionResult Clock2() => View();
+        // todo: reset appt time
         public IActionResult WristWatch() => View();
         public IActionResult About()
         {
