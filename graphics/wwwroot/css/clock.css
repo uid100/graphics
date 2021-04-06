@@ -1,109 +1,78 @@
-﻿
-
-body {
+﻿body {
     /*background: url('http://paper-backgrounds.com/textureimages/2012/05/white-concrete-wall-texture-background-hd.jpg');*/
 }
 
 section {
-    position: relative;
-    width: 92%;
-    height: 92%;
-    background: #00f url('/images/white-linen-paper-texture.jpg') center center;
-    border: thick solid #000;
+    width: 80vmin;
+    height: 80vmin;
+    margin: auto;
+    background: #fff url('../images/white-linen-paper-texture.jpg') center center;
+    border: 3vmin solid #000;
     border-radius: 50%;
+    margin-top: 3vmin;
     box-shadow: inset 40px 40px 90px rgba(0,0,0,.2), inset 10px 10px 30px rgba(0,0,0,.5), 20px 20px 30px rgba(0,0,0,.4), 40px 40px 60px rgba(0,0,0,.4);
-    top: 4%;
-    left: 4%;
+    position: relative;
     z-index: 1;
 }
-section:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    display: block;
-    background: transparent;
-    border: thick solid white;
-}
-section:after {
-    content: '';
-    width: 103%;
-    height: 103%;
-    border-radius: 50%;
-    display: block;
-    background: transparent;
-    position: absolute;
-    top: -1.5%;
-    left: -1.5%;
-    box-shadow: -3px -3px 9px rgba(255,255,255,.8);
-}
 
-.meas1,
-.meas2,
-.meas3,
-.meas4
-.meas5
-.meas6 {
-    position: absolute;
-    display: block;
-    left: 0%;
-    top: 50%;
-    height: 1px;
-    width: 100%;
-    background: #00f;
-    z-index: 350;
-    transform-origin:center;
-}
-.meas1 {
-    transform: rotate(-60deg);
-}
-.meas2 {
-    transform: rotate(-30deg);
-}
-.meas4 {
-    transform: rotate(30deg);
-}
-.meas5 {
-    transform: rotate(60deg);
-}
-.meas6 {
-    transform: rotate(90deg);
-}
+    section:before {
+        content: '';
+        width: 95%;
+        height: 95%;
+        border-radius: 50%;
+        display: block;
+        background: transparent;
+        border: 2vmin solid white;
+    }
+
+    /* highlight at top left of black outline */
+    section:after {
+        content: '';
+        width: 105%;
+        height: 105%;
+        border-radius: 50%;
+        display: block;
+        background: transparent;
+        position: absolute;
+        top: -2.5%;
+        left: -2.5%;
+        box-shadow: -3px -3px 9px rgba(255,255,255,.8);
+    }
 
 .label {
     position: absolute;
-    top: 65%;
-    left: 41%;
-    font-size: medium;
-    color: black;
-    text-align:center;
+    top: 19vmin;
+    left: 46%;
+    font-size: 2.5vmin;
 }
 
 .hourhand,
-.minutehand,
-.secondhand {
-    width: 40%;
-    height: 4%;
+.secondhand,
+.minutehand {
+    width: 25vmin;
+    height: 2vmin;
     background: #000;
     position: absolute;
-    top: 48%;
-    left: 44%;
+    top: 40vmin;
+    left: calc(50% - 3.5vmin);
     z-index: 2;
-    transform-origin: 15%;
-    /*transform: rotate(270deg);*/
+    transform: rotate(-139deg);
+    transform-origin: 16%;
 }
 
-.hourhand:after {
-    content: '';
-    background: #000;
-    height: 200%;
-    width: 20%;
-    border-radius: 50%;
-    z-index: 3;
-    position: absolute;
-    top: -50%;
-    left: 5%;
-}
+    .hourhand:after,
+    .secondhand:after,
+    .minutehand:after {
+        content: '';
+        background: #000;
+        width: 5vmin;
+        height: 5vmin;
+        border-radius: 50%;
+        z-index: 3;
+        position: absolute;
+        top: -1.5vmin;
+        left: 1.5vmin;
+    }
 
 .hourhand {
     border-top-right-radius: 20%;
@@ -112,43 +81,43 @@ section:after {
 }
 
 .minutehand {
-    background: #000;
-    width: 52%;
-    height: 2%;
-    top: 49%;
-    transform-origin: 11.5%;
+    width: 40vmin;
+    height: 1vmin;
+    top: 40.5vmin;
+    transform: rotate(-39deg);
+    transform-origin: 10%;
     border-top-right-radius: 30%;
     border-bottom-right-radius: 30%;
     box-shadow: -10px 10px 10px rgba(0,0,0,.4);
-    /*transform: rotate(135deg);*/
 }
 
-.minutehand:after {
-    content: '';
-    background: #000;
-    width: 14%;
-    height: 340%;
-    border-radius: 50%;
-    z-index: 3;
-    position: absolute;
-    top: -120%;
-    left: 4.5%;
-    box-shadow: -2px -2px 7px rgba(255,255,255,.6);
-}
+    .minutehand:before {
+        content: '';
+        width: 4.5vmin;
+        height: 4.5vmin;
+        border-radius: 50%;
+        z-index: 99;
+        position: absolute;
+        top: -1.7vmin;
+        left: 1.7vmin;
+        box-shadow: -2px -2px 7px rgba(255,255,255,.6);
+    }
+
+    .minutehand:after {
+        top: -2vmin;
+    }
 
 .secondhand {
-    background: #f00;
-    width: 54%;
-    height: 1%;
-    top: 49.5%;
-    transform-origin: 10%;
+    width: 35vmin;
+    height: .5vmin;
+    top: 40.75vmin;
+    transform: rotate(160deg);
+    transform-origin: 11.5%;
     box-shadow: -10px -10px 10px rgba(0,0,0,.4);
-    z-index: 5;
-    /*transform: rotate(90deg);*/
 }
 
     .secondhand:after {
-        //top: -2.25vmin;
+        top: -2.25vmin;
     }
 
 .hour12,
@@ -157,50 +126,34 @@ section:after {
 .hour3,
 .hour4,
 .hour5 {
-    position: absolute;
-    display: block;
-    height: 2%;
-    width: 90%;
+    height: 1vmin;
+    width: 55vmin;
     background: transparent;
-    border-left: 40px solid #000;
-    border-right: 40px solid #000;
-    transform-origin: center center;
-    transform: translate( -50%, -50%);
+    border-left: 7vmin solid #000;
+    border-right: 7vmin solid #000;
+    transform: translate(-50%, -50%);
+    /*     transform-origin: right bottom; */
     top: 50%;
     left: 50%;
-    z-index: 1;
-}
-/*
     position: absolute;
-    display: block;
-    left: 0%;
-    top: 50%;
-    height: 1px;
-    width: 100%;
-    background: #00f;
-    z-index: 350;
-    transform-origin:center;
+}
 
-*/
-
-.hour12 {
-    transform: rotate(-90deg) translate( 0.5%, -2250%);
+.hour3 {
+    transform: rotate(90deg) translate(0, 34vmin);
 }
 
 .hour1 {
-    transform: rotate(120deg) translate( 25%, 2000%);
+    transform: rotate(120deg) translate(17vmin, 30vmin);
 }
 
 .hour2 {
-    transform: rotate(150deg) translate( 44%, 1160%);
+    transform: rotate(150deg) translate(29vmin, 18vmin);
 }
 
 .hour4 {
-    transform: rotate(210deg) translate( 43%, -1111%);
+    transform: rotate(210deg) translate(30vmin, -17vmin);
 }
 
 .hour5 {
-    transform: rotate(240deg) translate( 25%, -1905%);
+    transform: rotate(240deg) translate(17vmin, -30vmin);
 }
-
-

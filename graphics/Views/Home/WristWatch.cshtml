@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Appointment Reminder</title>
+    <script type="text/javascript" src="~/js/LocalTime.js"></script>
+    <link rel="stylesheet" href="~/css/watch.css" />
+    <style>
+        body {
+            background-color: bisque;
+        }
+
+        #ReminderBlock {
+            background-color: linen;
+            margin: 10px 10px 10px 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            height: 550px;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="ReminderBlock">
+        <partial name="_ApptWatch" />
+    </div>
+
+</body>
+</html>

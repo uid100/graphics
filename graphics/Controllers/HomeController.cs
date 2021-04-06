@@ -10,54 +10,27 @@ namespace graphics.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Index2()
-        {
-            return View();
-        }
-
-        public IActionResult Index3()
-        {
-            return View();
-        }
-
-        public IActionResult Index4()
-        {
-            return View();
-        }
-
-        public IActionResult Index5()
-        {
-            return View();
-        }
-
-        public IActionResult Index6()
-        {
-            return View();
-        }
-
+        public IActionResult Index() => View();
+        public IActionResult BarGraph() => View();
+        public IActionResult CircularProgress() => View();
+        public IActionResult Timer() => View();
+        public IActionResult Arc() => View();
+        public IActionResult Clock() => View();
+        public IActionResult Clock2() => View();
+        public IActionResult WristWatch() => View();
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        public IActionResult Privacy() => View();
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

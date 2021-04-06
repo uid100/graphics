@@ -1,10 +1,10 @@
 ﻿
 
     <section>
-        <div class="label" id="clock"></div>
+        <div class="label" id="clock">SEIKO</div>
         <div class="hourhand" id="hour"></div>
-        <div class="minutehand" id="min"></div>
         <div class="secondhand" id="sec"></div>
+        <div class="minutehand" id="min"></div>
         <div class="hour12"></div>
         <div class="hour1"></div>
         <div class="hour2"></div>
@@ -12,17 +12,23 @@
         <div class="hour4"></div>
         <div class="hour5"></div>
 
-        <div class="meas1"></div>
-        <div class="meas2"></div>
-        <div class="meas3"></div>
-        <div class="meas4"></div>
-        <div class="meas5"></div>
-        <div class="meas6"></div>
+        <!--
+    <div class="meas1"></div>
+    <div class="meas2"></div>
+    <div class="meas3"></div>
+    <div class="meas4"></div>
+    <div class="meas5"></div>
+    <div class="meas6"></div>
+    -->
 
     </section>
 
 
-<script>var clockLabel = document.getElementById("clock");
+<script>
+    var t = setInterval(clockUpdate, 500);
+
+function clockUpdate() {
+var clockLabel = document.getElementById("clock");
     clockLabel.textContent = new Date().toLocaleTimeString('en-us', { timeZoneName: 'short' }).split(' ')[2]
     var now = new Date();
 
@@ -40,7 +46,9 @@
 
     var secAngle = (sec / 60 * 360) - 90;
     var localSec = document.getElementById('sec');
-    localSec.setAttribute('style', 'transform: rotate(' + secAngle + 'deg)');</script>
+    localSec.setAttribute('style', 'transform: rotate(' + secAngle + 'deg)');
+    }
+    </script>
 
 
 
