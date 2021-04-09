@@ -2,4 +2,4 @@
 # graphics
 Data visualization and customized clock element
 
-<iframe src="https://graphicstest.azurewebsites.net/Home/WristWatch"></iframe>
+https://graphicstest.azurewebsites.net/Home/WristWatch
